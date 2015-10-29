@@ -1,6 +1,8 @@
 language:
    - cpp
 
+sudo: false
+
 install:
    # gtest install workaround
    - sudo apt-get install libgtest-dev
