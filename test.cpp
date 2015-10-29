@@ -5,7 +5,11 @@ bool isTriangle(int a, int b, int c) {
     return (!((a <= 0 || b <= 0 || c <= 0) || ( a + b <= c || c + b <= a || c + a <= b)));
 }
 
-TEST(normal, normal_triangle) {
+TEST(isValid, invalidTriangle) {
+    EXPECT_EQ(isTriangle(3, 4, 1), false);
+}
+
+TEST(isValid, validTriangle) {
     EXPECT_EQ(isTriangle(3, 4, 5), true);
 }
 
