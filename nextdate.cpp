@@ -3,7 +3,7 @@
 
 char* nextDate(int m, int d, int y)
 {
-    int maxDayOfMon[13] = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int maxDayOfMon[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     if ((m <= 0 || d <= 0 || y <= 0) || (m > 12 || d > 31)){
         return "invalid date";
     }
