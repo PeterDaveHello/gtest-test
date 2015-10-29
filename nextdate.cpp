@@ -3,7 +3,7 @@
 
 char* nextDate(int m, int d, int y)
 {
-    if (m <= 0 || d <= 0 || y <= 0) {
+    if ((m <= 0 || d <= 0 || y <= 0) || (m > 12 || d > 31)){
         return "invalid date";
     }
     return "";
