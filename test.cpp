@@ -17,6 +17,9 @@ int triangleType(int a, int b, int c) {
     if (a == b || b == c || a == c) {
         return Isosceles;
     }
+    if (a*a + b*b == c*c || a*a + c*c == b*b || b*b + c*c == a*a) {
+        return Right;
+    }
     return Scalene;
 }
 
