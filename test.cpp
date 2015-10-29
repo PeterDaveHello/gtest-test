@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 #include <gtest/gtest.h>
 
+enum type {Equilateral, Isosceles, Scalene, Right, Obtuse, Invalid};
+
 bool isTriangle(int a, int b, int c) {
     return (!((a <= 0 || b <= 0 || c <= 0) || ( a + b <= c || c + b <= a || c + a <= b)));
 }
