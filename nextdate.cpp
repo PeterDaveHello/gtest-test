@@ -51,6 +51,12 @@ TEST(nextDate, changeYear) {
     EXPECT_STREQ(nextDate(12, 31, 2009), "1, 1, 2010");
 }
 
+TEST(nextDate, leapYearChangeFebDay) {
+    EXPECT_STREQ(nextDate(2, 28, 2000), "2, 29, 2000");
+    EXPECT_STREQ(nextDate(2, 28, 2004), "2, 29, 2004");
+    EXPECT_STREQ(nextDate(2, 28, 2008), "2, 29, 2008");
+}
+
 int main(int argc, char* argv[]) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
