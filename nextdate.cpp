@@ -46,6 +46,11 @@ TEST(nextDate, changeMonth) {
     EXPECT_STREQ(nextDate(11, 30, 3012), "12, 1, 3012");
 }
 
+TEST(nextDate, changeYear) {
+    EXPECT_STREQ(nextDate(12, 31, 2012), "1, 1, 2013");
+    EXPECT_STREQ(nextDate(12, 31, 2009), "1, 1, 2010");
+}
+
 int main(int argc, char* argv[]) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
