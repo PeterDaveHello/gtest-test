@@ -24,20 +24,20 @@ int triangleType(int a, int b, int c) {
 }
 
 TEST(isValid, invalidTriangle) {
-    EXPECT_EQ(isTriangle(0, 0, 1), false);
-    EXPECT_EQ(isTriangle(0, 0, 0), false);
-    EXPECT_EQ(isTriangle(3, 4, 0), false);
-    EXPECT_EQ(isTriangle(30, 4, 1), false);
-    EXPECT_EQ(isTriangle(-3, 4, 1), false);
-    EXPECT_EQ(isTriangle(3, -4, 1), false);
-    EXPECT_EQ(isTriangle(3, 4, -1), false);
-    EXPECT_EQ(isTriangle(3, 4, 1), false);
+    EXPECT_FALSE(isTriangle(0, 0, 1));
+    EXPECT_FALSE(isTriangle(0, 0, 0));
+    EXPECT_FALSE(isTriangle(3, 4, 0));
+    EXPECT_FALSE(isTriangle(30, 4, 1));
+    EXPECT_FALSE(isTriangle(-3, 4, 1));
+    EXPECT_FALSE(isTriangle(3, -4, 1));
+    EXPECT_FALSE(isTriangle(3, 4, -1));
+    EXPECT_FALSE(isTriangle(3, 4, 1));
 }
 
 TEST(isValid, validTriangle) {
-    EXPECT_EQ(isTriangle(3, 4, 5), true);
-    EXPECT_EQ(isTriangle(5, 4, 5), true);
-    EXPECT_EQ(isTriangle(7, 7, 7), true);
+    EXPECT_TRUE(isTriangle(3, 4, 5));
+    EXPECT_TRUE(isTriangle(5, 4, 5));
+    EXPECT_TRUE(isTriangle(7, 7, 7));
 }
 
 TEST(type, equilateralTriangle) {
