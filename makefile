@@ -6,4 +6,4 @@ all:
 	mkdir -p _builds
 	cmake .
 	make -C _builds
-	cd _builds && ctest
+	cd _builds && ./test_bin
