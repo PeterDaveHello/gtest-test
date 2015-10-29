@@ -8,6 +8,12 @@ bool isTriangle(int a, int b, int c) {
 }
 
 int triangleType(int a, int b, int c) {
+    if (!isTriangle(a, b, c)) {
+        return Invalid;
+    }
+    if (a == b && b == c) {
+        return Equilateral;
+    }
 }
 
 TEST(isValid, invalidTriangle) {
