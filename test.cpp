@@ -32,18 +32,18 @@ TEST(isValid, validTriangle) {
 }
 
 TEST(type, equilateralTriangle) {
-    EXPECT_EQ(triangleType(3, 3, 3), 0) << "type of 3, 3, 3 is Equilateral";
+    EXPECT_EQ(triangleType(3, 3, 3), Equilateral) << "type of 3, 3, 3 is Equilateral";
 }
 
 TEST(type, RightTriangle) {
-    EXPECT_EQ(triangleType(3, 4, 5), 3) << "type of 3, 4, 5 is Right";
-    EXPECT_EQ(triangleType(4, 5, 3), 3) << "type of 4, 5, 3 is Right";
-    EXPECT_EQ(triangleType(5, 4, 3), 3) << "type of 5, 4, 3 is Right";
+    EXPECT_EQ(triangleType(3, 4, 5), Right) << "type of 3, 4, 5 is Right";
+    EXPECT_EQ(triangleType(4, 5, 3), Right) << "type of 4, 5, 3 is Right";
+    EXPECT_EQ(triangleType(5, 4, 3), Right) << "type of 5, 4, 3 is Right";
 }
 
 TEST(type, IsoscelesTriangle) {
-    EXPECT_EQ(triangleType(2, 3, 3), 1) << "type of 2, 3, 3 is Isosceles";
-    EXPECT_EQ(triangleType(3, 4, 4), 1) << "type of 3, 4, 4 is Isosceles";
+    EXPECT_EQ(triangleType(2, 3, 3), Isosceles) << "type of 2, 3, 3 is Isosceles";
+    EXPECT_EQ(triangleType(3, 4, 4), Isosceles) << "type of 3, 4, 4 is Isosceles";
 }
 
 int main(int argc, char* argv[]) {
