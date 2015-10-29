@@ -21,6 +21,10 @@ TEST(nextDate, invalid) {
     EXPECT_STREQ(nextDate(12, 4, 0), "invalid date");
 }
 
+TEST(nextDate, valid) {
+    EXPECT_STREQ(nextDate(1, 4, 2012), "1, 5, 2012");
+}
+
 int main(int argc, char* argv[]) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
