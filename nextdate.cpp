@@ -8,6 +8,12 @@ char* nextDate(int m, int d, int y)
         return "invalid date";
     }
     char *result = "";
+    if (!(y % 400)) {
+        maxDayOfMon[2] = 29;
+    }
+    if (!(y % 4) && (y % 100)) {
+        maxDayOfMon[2] = 29;
+    }
     if (d == maxDayOfMon[m]) {
         d = 1;
         m += 1;
