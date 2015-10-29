@@ -11,7 +11,7 @@ char* nextDate(int m, int d, int y)
     if (d == maxDayOfMon[m]) {
         d = 1;
         m += 1;
-        if (m == 12) {
+        if (m == 13) {
             m = 1;
             y += 1;
         }
