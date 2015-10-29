@@ -7,7 +7,20 @@ char* nextDate(int m, int d, int y)
     if ((m <= 0 || d <= 0 || y <= 0) || (m > 12 || d > 31)){
         return "invalid date";
     }
-    return "";
+    char *result = "";
+    if (d == maxDayOfMon[m]) {
+        d = 1;
+        m += 1;
+        if (m == 12) {
+            m = 1;
+            y += 1;
+        }
+    } else {
+        d += 1;
+    }
+    std::stringstream ss;
+    ss << m << ", " << d << ", " << y;
+    return strdup(ss.str().c_str());
 }
 
 TEST(nextDate, invalid) {
