@@ -17,3 +17,4 @@ script:
     - cmake ..
     - make
     - ./test_bin
+    - ./test_bin2

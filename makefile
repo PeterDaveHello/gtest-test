@@ -7,3 +7,4 @@ all:
 	cmake .
 	make -C _builds
 	cd _builds && ./test_bin
+	cd _builds && ./test_bin2
