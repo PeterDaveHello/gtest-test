@@ -36,10 +36,14 @@ TEST(nextDate, invalid) {
 
 TEST(nextDate, valid) {
     EXPECT_STREQ(nextDate(1, 4, 2012), "1, 5, 2012");
+    EXPECT_STREQ(nextDate(2, 14, 2002), "2, 15, 2002");
+    EXPECT_STREQ(nextDate(12, 23, 2015), "12, 24, 2015");
 }
 
 TEST(nextDate, changeMonth) {
     EXPECT_STREQ(nextDate(1, 31, 2012), "2, 1, 2012");
+    EXPECT_STREQ(nextDate(3, 31, 2017), "4, 1, 2017");
+    EXPECT_STREQ(nextDate(11, 30, 3012), "12, 1, 3012");
 }
 
 int main(int argc, char* argv[]) {
